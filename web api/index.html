@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <script id="pokeCard" type="text/x-handlebars-template">
+        {{#characters}}
+        <div class="card">
+          <h2>{{name}}</h2>
+          <p><strong>Rarity:</strong> {{rarity}}</p>
+          <p><strong>Weapon:</strong> {{weapon}}</p>
+          <p><strong>Vision:</strong> {{vision}}</p>
+          <p><strong>Region:</strong> {{region}}</p>
+          <p><strong>Affiliation:</strong> {{affiliation}}</p>
+          <p><strong>Birthday:</strong> {{birthday}}</p>
+          <p><strong>Release Date:</strong> {{release_day}}</p>
+          <p><strong>Special Dish:</strong> {{special_dish}}</p>
+          <p><strong>Constellation:</strong> {{constellation}}</p>
+          <p><strong>Titles:</strong> {{title}}</p>
+          <p><strong>How to Obtain:</strong> {{how_to_obtain}}</p>
+          <a href="{{wiki_url}}" target="_blank">More Info</a>
+          <h3>Videos:</h3>
+          <ul>
+            {{#videos}}
+              <li><a href="{{.}}" target="_blank">Video {{@index}}</a></li>
+            {{/videos}}
+          </ul>
+
+        </div>
+      {{/characters}}
+    </script>
+        <div class="nav">
+            <span style="color: #3515d5;;">Genshin Api</span>
+        </div>
+        <div class="container">
+
+            <div id="characterContainer">
+    
+            </div>
+            <div class="button">
+                
+                <button id="left" >Previous</button>
+                <button id="right" >Next</button>
+                <img src="asset/loading.gif" alt="loading" id="loading">
+            </div>
+        </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
